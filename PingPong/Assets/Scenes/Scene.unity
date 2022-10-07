@@ -365,6 +365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 851608861, guid: 9f86403032cd37a4fa8564950bd17934, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 168019749065436555, guid: 9f86403032cd37a4fa8564950bd17934, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -479,6 +483,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 751020610236369192, guid: cd3cefea03ac54d419ca4ba5b936f431, type: 3}
+      propertyPath: m_Name
+      value: Limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 751020610236369192, guid: cd3cefea03ac54d419ca4ba5b936f431, type: 3}
+      propertyPath: m_TagString
+      value: Limit
+      objectReference: {fileID: 0}
     - target: {fileID: 751020611596064576, guid: cd3cefea03ac54d419ca4ba5b936f431, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -526,6 +538,14 @@ PrefabInstance:
     - target: {fileID: 751020611596064579, guid: cd3cefea03ac54d419ca4ba5b936f431, type: 3}
       propertyPath: m_Name
       value: Cenari
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715300488756063639, guid: cd3cefea03ac54d419ca4ba5b936f431, type: 3}
+      propertyPath: m_Name
+      value: Limit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715300488756063639, guid: cd3cefea03ac54d419ca4ba5b936f431, type: 3}
+      propertyPath: m_TagString
+      value: Limit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3cefea03ac54d419ca4ba5b936f431, type: 3}
