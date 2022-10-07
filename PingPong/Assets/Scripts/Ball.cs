@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    Vector3 direction;
+    Rigidbody2D rb;
     public float speed;
+    Vector2 direction;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        direction = new Vector2(1,Random.Range(-1.0f,1.0f));
+    }
 
     // Update is called once per frame
-    void Start() {
-        direction = new Vector3(UnityEngine.Random.Range(-1f,1),UnityEngine.Random.Range(-1f,1f),0);
-    }
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = direction+=1;
-        
+        rb.MovePosition(rb.position+direction*speed*Time.fixedDeltaTime);
     }
 }
