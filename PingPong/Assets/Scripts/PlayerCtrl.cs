@@ -11,14 +11,7 @@ public class PlayerCtrl : MonoBehaviour
     private void Awake()
     {
         rbP = GetComponent<Rigidbody2D>();
-
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         vert = Input.GetAxisRaw("Vertical");

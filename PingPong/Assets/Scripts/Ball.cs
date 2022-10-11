@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    Rigidbody2D rb;
-    public float speed;
-    Vector2 direction;
-    private void Start() {
-        
-    }
+    public Rigidbody2D rb;
+    float speed = 5.0f;
+    public float cSpeed;
+    public Vector2 direction;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        direction = new Vector2(1,Random.Range(-1.0f,1.0f));
+        direction = new Vector2(Random.Range(-1.0f,1.0f),Random.Range(-1.0f,1.0f));
+        cSpeed  = speed;
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position+direction*speed*Time.fixedDeltaTime);
+        rb.MovePosition(rb.position+direction*cSpeed*Time.fixedDeltaTime);
     }
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag=="Limit"){
@@ -27,7 +24,12 @@ public class Ball : MonoBehaviour
         }
         else{
             direction = new Vector2(-direction.x,Random.Range(-1.0f,1.0f));
-            speed+=1;
+            cSpeed+=1;
         }
+    }
+
+    public void Point(){
+        cSpeed = speed;
+        Debug.Log("funfou");
     }
 }
