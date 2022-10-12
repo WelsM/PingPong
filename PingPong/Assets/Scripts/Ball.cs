@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public Rigidbody2D rb;
-    float speed = 5.0f;
+    float speed = 10.0f;
     public float cSpeed;
     public Vector2 direction;
     void Awake()
@@ -30,6 +30,7 @@ public class Ball : MonoBehaviour
 
     public void Point(){
         cSpeed = speed;
-        Debug.Log("funfou");
+        rb.position = new Vector2(0,0);
+        direction = new Vector2(Random.Range(-1.0f,1.0f),Random.Range(-1.0f,1.0f));
     }
 }

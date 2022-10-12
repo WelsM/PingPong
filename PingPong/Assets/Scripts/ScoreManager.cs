@@ -7,7 +7,12 @@ public class ScoreManager : MonoBehaviour
     public Text _score;
 
     void OnTriggerEnter2D(Collider2D other) {
-        score++;
-        _score.text =""+score;
+        Ball ball = other.gameObject.GetComponent<Ball>();
+        if (ball!=null)
+        {
+            score++;
+            _score.text =""+score;
+            ball.Point();
+        }
     }
 }
